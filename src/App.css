@@ -1,38 +1,154 @@
+
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: serif;
+  background-color: #eeeeee;
+  overflow:scroll;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 10vh;
+  background-color: black;
+  border-bottom: 1px solid black;
   display: flex;
+}
+
+.header-icon {
+  height: 100%;
+}
+
+.title {
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  margin: auto 1%;
+  background-color: black;
+}
+
+.main {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.board {
+  height: 65%;
+  margin-top: 2%;
+  background-color: #005500;
+  border: 10px solid #8B4513;
+  border-radius: 100px;
+  box-sizing: border-box;
+}
+
+.container {
+  width:100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.upper-area {
+  height:30%;
+  width: 70%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.dealer-area {
+  height: 100%;
+  width: 50%;
+}
+
+.score-area {
+  height: 20%;
+  font-weight: bold;
+}
+
+.hand-area {
+  height:60%;
+}
+
+
+
+.deck-area {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.name-area {
+  font-weight: bold;
+  width: 100%;
+  height: 20%;
+}
+
+.text {
+  font-size: 15px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.deck {
+  height:60%;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-img {
+  border-radius: 10%;
+  height: 100%;
 }
+
+.lower-area {
+  height: 60%;
+  width: 100%;
+}
+
+.player-area {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.table-area {
+  height: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dealer-table {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+
+table {
+  width: 90%;
+  border-collapse: collapse; 
+  text-align: center;
+}
+
+th {
+  width: 12.5%;
+}
+
+
+
+
