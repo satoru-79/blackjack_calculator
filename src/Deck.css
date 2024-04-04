@@ -1,0 +1,73 @@
+
+
+.deck {
+  width: 70%;
+  max-width: 43px;
+ 
+}
+
+.card-img {
+    border-radius: 10%;
+    width: 100%;
+  }
+
+.modal-head {
+    position: fixed;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: burlywood;
+}
+
+
+.modal-text {
+    font-size: 24px;
+    font-weight: 900;
+    font-family: serif;
+    margin: 0;
+}
+
+.deck-content {
+    position: absolute;
+    top: 5vh;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.item {
+    height:18vh;
+    aspect-ratio:0.7;
+    margin-right: 0.5vh;
+    margin-bottom:0.5vh;
+}
+
+.card {
+    width: 100%;
+}
+
+
+.change-area {
+    width: 20vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.change-btn {
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 1vh;
+}
+
+.shuffle-btn{
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 0 1vh;
+    margin-right: 1vh;
+    background-color: white;
+}
+
