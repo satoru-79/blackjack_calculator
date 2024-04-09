@@ -5,15 +5,14 @@ import AdditionalPlayer from './component/AdditionalPlayer';
 import Table from './component/Table';
 import {useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Main() {
   //レスポンシブ対応用の変数
   const isDesktop = useMediaQuery({ query: '(min-width: 800px)' })
   const tableRow = useMediaQuery({ query: '(min-width: 750px)'})
   const miniFont = useMediaQuery({ query:'(max-width: 480px)'})
-  const navigate = useNavigate();
-
+ 
   const [you, setYou] = useState({ name: "YOU", total: [0], poss: [],
   tableData :[
     [0, 0, 0, 0, 0, 0, 0],
@@ -288,14 +287,14 @@ function Main() {
             ブラックジャック確率計算ツール
           </p>
         </div>
-        <div className='info-area' onClick={() => navigate("/infomation")}>         
+        <Link to={'information'} className='info-area'>      
             <img src='image/infomation.png' alt='' className='info-img'/>
             <div className='info-title flex-center'>
               <p className='info-text' style={{fontSize:miniFont && "8px"}}>
                 ツールの詳細
               </p>
             </div>
-        </div>
+        </Link>
       </header>
       <div className='main'>
         <div className='board' style={{width: isDesktop ? "70%" : "100%"}}>

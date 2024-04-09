@@ -51,6 +51,7 @@
   flex-direction: row;
   background-color: white;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .info-area:hover{
@@ -73,6 +74,7 @@
 
 .info-text {
   font-weight: 900;
+  color: black;
 }
 
 
