@@ -32,7 +32,7 @@ const Deck = ({deck,changeDeck,deckNum,type,shuffleCards,addCard,owner}) => {
 
             { type !== "add"
             ?
-            <div className='deck' >
+            <div className='deck' style={{marginTop:"1%"}}>
                 <img src='image/Bicyclebackside.jpg' alt='' className='card-img btn' 
                      onClick={() => {setEditModalIsOpen(true)}}
                 />  
@@ -50,17 +50,19 @@ const Deck = ({deck,changeDeck,deckNum,type,shuffleCards,addCard,owner}) => {
                     <div className="modal-head" 
                          style={{width: modalWidth ? "80vw": "100vw"}}
                     >
-                        <div style={{width:"20vw",display:"flex",alignItems:"center"}}>
-                            <p onClick={() => {setEditModalIsOpen(false)}} className='btn modal-text'>
+                        <div style={{width:"20vw",display:"flex",alignItems:"center",}}>
+                            <p onClick={() => {setEditModalIsOpen(false)}} className='btn modal-text flex-center'
+                               style={{aspectRatio:1}}
+                            >
                                 ✖️
                             </p>
                         </div>
                         <div className="flex-center" 
                              style={{width: modalWidth ? "40vw" : "60vw"}}
                         >
-                            { type === "used" && <p className="modal-text">USED</p>}
-                            { type === "deck" && <p className='modal-text'>DECK</p>}
-                            { type === "add"  && <p className="modal-text">ADD</p>}
+                            { type === "used" && <p className="modal-text flex-center">USED</p>}
+                            { type === "deck" && <p className='modal-text flex-center'>DECK</p>}
+                            { type === "add"  && <p className="modal-text flex-center">ADD</p>}
                         </div>
                         { type === "deck" 
                         ?<div className="change-area">
@@ -80,7 +82,7 @@ const Deck = ({deck,changeDeck,deckNum,type,shuffleCards,addCard,owner}) => {
                         : type === "used" ?
                         <div className="change-area">
                             <div style={{height:"4vh"}} className="change-area">
-                                <p className='modal-text shuffle-btn btn' style={{fontSize:"20px"}}
+                                <p className='modal-text shuffle-btn btn flex-center' style={{fontSize:"20px"}}
                                    onClick={() => {shuffleCards()}}>
                                     shuffle
                                 </p>

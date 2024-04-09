@@ -3,16 +3,16 @@ import Card from "./Card";
 import "../CardList.css";
 
 const CardList = ({ deck, owner, addCard,}) => {
-  let min = Math.min.apply(null, owner.total);
-  let max = Math.max.apply(null, owner.total);
-  let length = owner.total.filter((total) => total < 22).length;  
-  let isDealer = owner.name === "DEALER";
-  let isntAddedPlayer = ((isDealer) || (owner.name === "YOU") || (owner.name === "YOU2"));
+  const min = Math.min.apply(null, owner.total);
+  const max = Math.max.apply(null, owner.total);
+  const length = owner.total.filter((total) => total < 22).length;  
+  const isDealer = owner.name === "DEALER";
+  const isntAddedPlayer = ((isDealer) || (owner.name === "YOU") || (owner.name === "YOU 2"));
   const displayAddCard = (isDealer && ( (length === 1 && min < 17) || (length !== 1 && max < 18) ) )
                       || (!isDealer && min < 21) 
 
   return (
-    <div className="cardlist" 
+    <div className="cardlist flex-center" 
          style={{flexDirection: isntAddedPlayer ? "row" : "column",}}
     >
         {displayAddCard ?
@@ -34,7 +34,9 @@ const CardList = ({ deck, owner, addCard,}) => {
                 return (
                     <div  key={value.key} 
                           style={{ marginLeft: marginLeft,maxWidth:"46px",
-                          width:isntAddedPlayer ? "53.8%" : "77%"}}>              
+                          width:isntAddedPlayer ? "53.8%" : "90%",height:"95%"}}
+                          className="flex-center"
+                    >              
                         <Card card={value} handed={""} />
                     </div>
                 );
