@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/blackjack_calculator/static/css/main.260ba4fb.css",
+    "main.js": "/blackjack_calculator/static/js/main.d16a8bda.js",
+    "static/js/453.033fd8dc.chunk.js": "/blackjack_calculator/static/js/453.033fd8dc.chunk.js",
+    "index.html": "/blackjack_calculator/index.html",
+    "main.260ba4fb.css.map": "/blackjack_calculator/static/css/main.260ba4fb.css.map",
+    "main.d16a8bda.js.map": "/blackjack_calculator/static/js/main.d16a8bda.js.map",
+    "453.033fd8dc.chunk.js.map": "/blackjack_calculator/static/js/453.033fd8dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.260ba4fb.css",
+    "static/js/main.d16a8bda.js"
+  ]
+}
