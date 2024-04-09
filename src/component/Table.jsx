@@ -1,10 +1,9 @@
 import "../App.css"
 
-const Table = ({owner, fontSize,isDesktop,tableRow}) => {
-
+const Table = ({owner,tableRow}) => {
 
     return (
-        <div className='dealer-table'  style={{width: tableRow ? "50%" : "100%"}}>
+        <div className='table'  style={{width: tableRow ? "50%" : "100%"}}>
             <div className='name-area flex-center'>
                 <p className='text' style={{color:"black"}}>{owner.name}</p>
             </div>
