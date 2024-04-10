@@ -1,27 +1,26 @@
 import "./App.css"
 import "./Infomation.css"
-import {useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 const Infomation = () => {
 
-    const navigate = useNavigate();
     const miniFont = useMediaQuery({ query:'(max-width: 480px)'})
 
     return (
         <div className="App">
             <header className="App-header">
                 <div style={{display:"flex", flexDirection:"row",width:"70%"}}>
-                    <img src='icon.png' className='header-icon' alt=''
-                         onClick={() => navigate('/')}
-                    />
+                    <Link to={'/'}>
+                        <img src='icon.png' className='header-icon' alt=''/>
+                    </Link>
                     <p className='title'
                        style={{fontSize:miniFont && "12px"}}
                     >
                         ブラックジャック確率計算ツール
                     </p>
                 </div>
-                <div className='info-area' onClick={() => navigate("/infomation")}>         
+                <div className='info-area' >         
                     <img src='image/infomation.png' alt='' className='info-img'/>
                     <div className='info-title flex-center'>
                          <p className='info-text'
